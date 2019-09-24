@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html <?php language_attributes(); ?>>
     <head>
 
-        <meta charset="UTF-8">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
 
         <meta name="viewport" 
               content="width=device-width, initial-scale=1.0">
         
         <meta http-equiv="X-UA-Compatible" 
               content="ie=edge">
-        
-        <title>
-            Document
+
+        <title> 
+            <?php 
+                echo get_bloginfo($show='name')
+            ?>
         </title>
+
+        <?php 
+            wp_head();
+        ?>
     </head>
     <body>
-        <header>
-            
-        </header>
-
+        <?php 
+            get_header();
+        ?>
+        
         <main> 
 
         </main>
         
-        <footer> 
-
-        </footer>
+        <?php 
+            get_footer();
+        ?>
     </body>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136109379-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136109379-3');
+    </script>
+
 </html>

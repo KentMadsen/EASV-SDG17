@@ -1,3 +1,5 @@
-<?php
- 
-?>
+<header> 
+    <?php
+    echo "Header Area"
+    ?>
+</header>
