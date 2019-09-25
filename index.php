@@ -11,6 +11,13 @@
         <meta http-equiv="X-UA-Compatible" 
               content="ie=edge">
 
+        <meta name="description" 
+              content="">
+
+        <meta name="og:title" 
+              property="og:title" 
+              content="<?php get_bloginfo($show='name') ?>">
+
         <title> 
             <?php 
                 echo get_bloginfo($show='name')
@@ -25,8 +32,37 @@
         <?php 
             get_header();
         ?>
-        
-        <main> 
+
+        <main>
+            <?php 
+                $all_posts = get_posts();
+
+                $i = 0;
+
+                for( $i = 0; 
+                     $i < count( $all_posts ); 
+                     $i ++ )
+                {
+                    $post = get_post( $all_posts[$i] -> ID );
+
+                    echo "<p>";
+                    echo $post->post_title;
+                    echo "</p>";
+                    
+                    echo "<p>";
+                    echo $post->post_type;
+                    echo "</p>";
+
+                    echo "<p>";
+                    echo $post->post_status;
+                    echo "</p>";
+
+                    echo "<p>";
+                    echo $post->post_content;
+                    echo "</p>";
+
+                }
+            ?> 
 
         </main>
         
