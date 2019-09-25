@@ -34,36 +34,7 @@
         ?>
 
         <main>
-            <?php 
-                $all_posts = get_posts();
-
-                $i = 0;
-
-                for( $i = 0; 
-                     $i < count( $all_posts ); 
-                     $i ++ )
-                {
-                    $post = get_post( $all_posts[$i] -> ID );
-
-                    echo "<p>";
-                    echo $post->post_title;
-                    echo "</p>";
-                    
-                    echo "<p>";
-                    echo $post->post_type;
-                    echo "</p>";
-
-                    echo "<p>";
-                    echo $post->post_status;
-                    echo "</p>";
-
-                    echo "<p>";
-                    echo $post->post_content;
-                    echo "</p>";
-
-                }
-            ?> 
-
+            
         </main>
         
         <?php 
@@ -72,13 +43,15 @@
     </body>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136109379-3"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136109379-3">
+    </script>
+    
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-136109379-3');
+        gtag('config', 'UA-136109379-3');
     </script>
 
 </html>
