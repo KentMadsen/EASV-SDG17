@@ -29,16 +29,18 @@
         ?>
     </head>
     <body>
-        <?php 
-            get_header();
-        ?>
+        <div id="application">
+            <?php 
+                get_header();
+            ?>
 
-        <main>
+            <main>
 
-        </main>
-        
-        <?php 
-            get_footer();
-        ?>
+            </main>
+            
+            <?php 
+                get_footer();
+            ?> 
+        </div>
     </body>
 </html>
