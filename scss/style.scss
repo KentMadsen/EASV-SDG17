@@ -5,7 +5,7 @@ body
 {
     margin: 0px;
     padding: 0px;
-}
+};
 
 #application
 {
@@ -18,14 +18,17 @@ body
 
     padding:0px;
     margin: 0px;
-}
+};
+
 
 header
 {
     display: block;
     width: 100%;
     height: 120px;
-}
+};
+
+@import './header.scss';
 
 main
 {
@@ -34,13 +37,15 @@ main
     height: 120px;
 
 
-}
+};
 
 footer 
 {
     display: block;
     width: 100%;
     height: 120px;
+    
+    
+};
 
-
-}
+@import './footer.scss';
